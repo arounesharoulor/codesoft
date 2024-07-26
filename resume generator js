@@ -1,0 +1,49 @@
+document.getElementById('resumeForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const fullName = document.getElementById('fullName').value;
+    const email = document.getElementById('email').value;
+    const phone = document.getElementById('phone').value;
+    const address = document.getElementById('address').value;
+    const linkedin = document.getElementById('linkedin').value;
+    const portfolio = document.getElementById('portfolio').value;
+    const objective = document.getElementById('objective').value;
+    const education = document.getElementById('education').value;
+    const experience = document.getElementById('experience').value;
+    const skills = document.getElementById('skills').value;
+    const certifications = document.getElementById('certifications').value;
+    const languages = document.getElementById('languages').value;
+    const Project =document.getElementById('Project').value;
+
+    const resumeHTML = `
+        <h2>${fullName}</h2>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Phone:</strong> ${phone}</p>
+        <p><strong>Address:</strong> ${address}</p>
+        <p><strong>LinkedIn:</strong> <a href="${linkedin}" target="_blank">${linkedin}</a></p>
+        <p><strong>Portfolio:</strong> <a href="${portfolio}" target="_blank">${portfolio}</a></p>
+        <p><strong>Project:</strong> <a href="${Project}" target="_blank">${Project}</a></p>
+        <p><strong>Achievements:</strong> <a href="${Acvhievements}" target="_blank">${Acvhievements}</a></p>
+
+
+        <h3>Career Objective</h3>
+        <p>${objective}</p>
+        
+        <h3>Education</h3>
+        <p>${education}</p>
+        
+        <h3>Experience</h3>
+        <p>${experience}</p>
+        
+        <h3>Skills</h3>
+        <p>${skills}</p>
+        
+        <h3>Certifications</h3>
+        <p>${certifications}</p>
+        
+        <h3>Languages</h3>
+        <p>${languages}</p>
+    `;
+
+    document.getElementById('resumeOutput').innerHTML = resumeHTML;
+});
